@@ -1,0 +1,97 @@
+<% provide :title, t("admin") %>
+<div class="content-header content-header-media">
+  <div class="header-section">
+    <div class="row">
+      <div class="col-md-4 col-lg-6 hidden-xs hidden-sm">
+        <h1>
+          <%= t "welcome" %> <strong><%= t "admin" %></strong><br><small>
+          <%= t "you_look_awesome" %></small>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <%= image_tag "admin/header.jpg", class: "animation-pulseSlow" %>
+</div>
+<div id="page-content">
+  <div class="content-header">
+    <ul class="nav-horizontal text-center">
+      <li class="active">
+        <%= link_to admin_root_path do %>
+          <i class="fa fa-home"></i> <%= t "home" %>
+        <% end %>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li class="active">
+        <%= link_to "#" do %>
+          <i class="hi hi-tasks"></i> <%= t "name" %>
+        <% end %>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li class="active">
+        <%= link_to "#" do %>
+          <i class="gi gi-charts"></i><%= t "name" %>
+        <% end %>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li class="active">
+        <%= link_to "#" do %>
+          <i class="gi gi-group"></i> <%= t "name" %>
+        <% end %>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li class="active">
+        <%= link_to "#" do %>
+          <i class="gi gi-fast_food"></i><%= t "name" %>
+        <% end %>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li class="active">
+        <%= link_to "#" do %>
+          <i class="gi gi-shopping_cart"></i> <%= t "name" %>
+        <% end %>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li class="active">
+        <%= link_to "#" do %>
+          <i class="gi gi-lightbulb"></i> <%= t "name" %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

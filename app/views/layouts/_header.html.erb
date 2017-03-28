@@ -1,0 +1,137 @@
+<div class="header-bot">
+  <div class="container">
+    <div class="col-md-3 header-left">
+      <h1><%= link_to(image_tag "home/logo5.png", class: "image-logo") %></h1>
+    </div>
+    <div class="col-md-6 header-middle">
+      <form>
+        <div class="search">
+          <input type="search" value="Search">
+        </div>
+        <div class="section_room">
+          <select id="country" onchange="change_country(this.value)"
+            class="frm-field required">
+            <option value="null">
+              <%= t "view.layouts.chon_muc_timkiem" %>
+            </option>
+            <option value="1">
+              <%= t "view.layouts.chon_muc_timkiem" %>
+            </option>
+            <option value="2">
+              <%= t "view.layouts.chon_muc_timkiem" %>
+            </option>
+          </select>
+        </div>
+        <div class="sear-sub">
+          <input type="submit" value=" ">
+        </div>
+        <div class="clearfix"></div>
+      </form>
+    </div>
+    <div class="col-md-3 header-right footer-bottom">
+      <ul>
+        <li><a href="#" class="use1" data-toggle="modal" data-target="#login">
+          <span><%= t "view.layouts.dangnhap" %></span></a>
+        </li>
+        <li><a class="fb" href="#"></a></li>
+        <li><a class="twi" href="#"></a></li>
+        <li><a class="insta" href="#"></a></li>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<div class="ban-top">
+  <div class="container">
+    <div class="top_nav_left">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse menu--shylock"
+            id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav menu__list">
+              <li class="active menu__item menu__item--current">
+                <%= link_to root_path, class: "menu__link" do %>
+                  <%= t "trangchu" %><span class="sr-only"></span>
+                <% end %>
+              </li>
+              <li class=" menu__item"><%= link_to t("diadiemphuot"),
+               locations_path, class: "menu__link" %>
+              </li>
+              <li class=" menu__item"><%= link_to t("khamphavietnam"),
+                destinations_path, class: "menu__link" %>
+              </li>
+              <li class=" menu__item"><%= link_to t("sukien"), events_path,
+                class: "menu__link" %>
+              </li>
+              <li class="dropdown menu__item">
+                <a href="#" class="dropdown-toggle menu__link"
+                  data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false"><%= t "bog" %>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu multi-column columns-3">
+                  <div class="row">
+                    <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
+                      <%= link_to image_tag("home/anh5.jpg") %>
+                    </div>
+                    <div class="col-sm-3 multi-gd-img">
+                      <ul class="multi-column-dropdown">
+                        <li>
+                          <a href="mens.html"><%= t "view.layouts.meophuot" %>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="mens.html"><%= t "view.layouts.kinhnghiem" %>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="mens.html"><%= t "view.layouts.meophuot" %>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </ul>
+              </li>
+              <li class="dropdown menu__item">
+                <a href="#" class="dropdown-toggle menu__link"
+                  data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false"><%= t "name" %>
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu multi-column columns-3">
+                  <div class="row">
+                    <div class="col-sm-4 multi-gd-img1 multi-gd-text ">
+                      <%= link_to image_tag("avatar.png") %>
+                    </div>
+                    <div class="col-sm-3 multi-gd-img">
+                      <ul class="multi-column-dropdown">
+                        <li>
+                          <a href="mens.html">
+                            <%= t "view.layouts.hồ sơ" %>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>

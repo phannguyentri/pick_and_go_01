@@ -1,0 +1,62 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import 'bootstrap/glyphicons';
+
+.img-responsive-slide{
+  height: 591px;
+  width: 1000px;
+}
+.img-responsive-subslide{
+  width: 276px;
+  height: 286px;
+}
+.image-logo{
+  width: 120px;
+  height: 59px;
+}
+.image-location{
+  width: 200px;
+  height: 200px;
+}
+.image-event-home{
+  width: 725px;
+  height: 306px;
+}
+.image-event-index1{
+  width: 625px;
+  height:  256px;
+}
+.image-event-index2{
+  width: 525px;
+  height:  256px;
+}
+.electronics-staticpages-top{
+  margin-top: -10%;
+}
+.event-staticpages{
+  margin-left: 20%;
+}
+.electronics-staticpages-destination{
+  margin-top: -15%;
+}
+.destination-like{
+  margin-right: 159px;
+}
+.destination-name-color{
+  color: black;
+}
+.destination-luotxem-color{
+  color: gray;
+}
+.khampha-submit{
+  padding-top: 5%;
+}
+.location-like{
+  margin-right: 90px;
+}
+.location-color-luotxem{
+  color: gray;
+}
+.location-submit{
+  padding-top: 5%;
+}

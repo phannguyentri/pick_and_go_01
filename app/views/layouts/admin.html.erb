@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "admin" %>
+    <%= javascript_include_tag "admin" %>
+    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <div id="page-container"
+        class="sidebar-partial sidebar-visible-lg  sidebar-no-animations">
+        <div id="sidebar">
+          <%= render "admin/layouts/menu" %>
+          <%= render "admin/layouts/header" %>
+          <% flash.each do |message_type, message| %>
+            <div id="indent-flash" class="alert alert-<%= message_type %>">
+              <%= message %>
+            </div>
+          <% end %>
+          <%= yield %>
+          <%= render "admin/layouts/footer" %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
