@@ -12,7 +12,18 @@ en:
   luotxem: "Lượt xem"
   xemngay: "Xem ngay"
   moi: "Mới"
+  thoat: "Thoát"
+  error: "error"
+  time:
+    formats:
+      short: "%m/%d/%Y %H:%M"
   view:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
     layouts:
       info_footer: "Hãy tham gia và cùng chúng tôi bay đi khắp mọi miền đất nước,
         PICK AND GO, xách dép lên và đi, nơi cho bạn những kiến thức sẵn sàng
@@ -50,3 +61,59 @@ en:
       info_location: "Hãy đi và khám phá văn hóa, con người và những điểm phượt
         hấp dẫn của 63 tỉnh thành Việt Nam"
       khampha63: "Khám phá 63 tỉnh thành Việt Nam"
+    admin:
+      layouts:
+        quanlythanhvien: "Quản lý thành viên"
+      users:
+        hoten: "Họ Tên"
+        hinhanh: "Hình ảnh"
+        hinhanhcu: "Hình ảnh cũ"
+        email: "Email"
+        sdt: "Số điện thoại"
+        diachi: "Địa chỉ"
+        vitri: "Vị trí"
+        ngaytao: "Ngày tạo"
+        hanhdong: "Hành động"
+        xoa: "Xóa"
+        chinhsua: "Chỉnh sửa"
+        themthanhvien: "Thêm thành viên"
+        danhsachthanhvien: "Danh sách thành viên"
+        thanhvien: "Thành viên"
+        them: "Thêm"
+        luuthaydoi: "Lưu thay đổi"
+        quantrivien: "Quản trị viên"
+        matkhau: "Mật khẩu"
+        xacnhanmatkhau: "Xác nhận mật khẩu"
+        themthanhcong: "Thêm thành công"
+        themthatbai: "Thêm thất bại"
+        capnhapthanhcong: "Cập nhập thành công"
+        capnhapthatbai: "Cập nhập thất bại"
+        loi: "Lỗi, không tìm thấy"
+        bandongy: "Bạn đồng ý?"
+        xoathanhcong: "Xóa thành công"
+        xoathatbai: "Xóa thất bại"
+      destinations:
+        themthanhcong: "Thêm thành công"
+        themthatbai: "Thêm thất bại"
+        capnhapthanhcong: "Cập nhập thành công"
+        capnhapthatbai: "Cập nhập thất bại"
+        xoathatbai: "Xóa thất bại"
+        loi: "Lỗi, không tìm thấy"
+        danhsach: "Danh sách khám phá Việt Nam"
+        them: "Thêm"
+        id: "ID"
+        hinhanh: "Hình ảnh"
+        ten: "Tên tỉnh/thành phố"
+        ngaydang: "Ngày đăng"
+        hanhdong: "Hành động"
+        trangthai: "Trạng thái"
+        thembaiviet: "Thêm bài viết"
+        gioithieu: "Giới thiệu"
+        noidung: "Nội dung"
+        thoat: "Thoát"
+        xoa: "Xóa"
+        chinhsua: "Chỉnh sửa"
+        xem: "Xem"
+        bandongy: "Bạn đồng ý?"
+  model:
+    hinhanh: "Không quá 5 MB"

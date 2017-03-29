@@ -1,0 +1,31 @@
+<tr class="active" id="del-user-<%= user.id %>">
+  <td><%= user.name %></td>
+  <td><%= image_tag user.image.url, class: "image_user" %></td>
+  <td><%= user.email %></td>
+  <td><%= user.phone %></td>
+  <td><%= user.address %></td>
+  <td>
+    <% if user.is_admin? %>
+      <%= t "view.admin.users.quantrivien" %>
+    <% else %>
+      <%= t "view.admin.users.thanhvien" %>
+    <% end %>
+  </td>
+  <td><%= l user.created_at, format: :short %></td>
+  <td class="text-center">
+    <% if !(user.is_admin) %>
+      <div class="btn-group btn-group-xs">
+        <button class="btn btn-primary btn-lg" data-toggle="modal"
+          data-target="#edit-user-<%= user.id %>",
+          title= <%= t "view.admin.users.chinhsua" %> >
+          <i class="fa fa-pencil"></i>
+        </button>
+        <a data-userid="<%= user.id %>" title= <%= t "view.admin.users.xoa" %>
+          class="btn btn-default del-user" href="#" >
+          <i class="fa fa-times"></i>
+        </a>
+      </div>
+    <% end %>
+    <%= render partial: "edit_user", locals: {user: user} %>
+  </td>
+</tr>
