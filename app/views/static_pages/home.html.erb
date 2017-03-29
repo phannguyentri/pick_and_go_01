@@ -1,0 +1,184 @@
+<div class="electronics electronics-staticpages-top">
+  <div class="container">
+    <div class="new_arrivals">
+      <h3><span><%= t "sukien" %>
+        </span><%= t "view.static_pages.dangdienra" %>
+      </h3>
+      <p><%= t "view.static_pages.haythamgia" %>></p>
+    </div>
+    <div class="event-staticpages">
+      <div class="col-md-9 electro-left text-center">
+        <div class="electro-img-left mask">
+          <div class="content-grid-effect slow-zoom vertical">
+            <div class="img-box"><%= image_tag "home/event1.jpg",
+              class: "img-responsive zoom-img image-event-home" %>
+            </div>
+            <div class="info-box">
+              <div class="info-content electro-text simpleCart_shelfItem">
+                <h4><%= t "view.static_pages.ten_sukien" %></h4>
+                <span class="separator"></span>
+                <p>
+                  <span class="item_price">
+                    <%= t "view.static_pages.songuoithamgia" %> :
+                  </span>
+                </p>
+                <span class="separator"></span>
+                <a class="item_add hvr-outline-out button2" href="#">
+                  <%= t "xem" %>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="event-staticpages">
+      <div class="col-md-9 electro-left text-center">
+        <div class="electro-img-left mask">
+          <div class="content-grid-effect slow-zoom vertical">
+            <div class="img-box"><%= image_tag "home/event2.jpg",
+              class: "img-responsive zoom-img image-event-home" %>
+            </div>
+            <div class="info-box">
+              <div class="info-content electro-text simpleCart_shelfItem">
+                <h4><%= t "view.static_pages.ten_sukien" %></h4>
+                <span class="separator"></span>
+                <p>
+                  <span class="item_price">
+                    <%= t "view.static_pages.songuoithamgia" %> :
+                  </span>
+                </p>
+                <span class="separator"></span>
+                <a class="item_add hvr-outline-out button2" href="#">
+                  <%= t "xem" %>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="electronics electronics-staticpages-destination">
+  <div class="container">
+    <div class="new_arrivals">
+      <h3><span><%= t "view.static_pages.diemphuot" %></span>
+        <%= t "view.static_pages.noibat" %>
+      </h3>
+      <p><%= t "view.static_pages.info" %></p>
+    </div>
+    <div class="col-md-12 electro-left">
+      <div class="electro-img-btm-right mask">
+        <div class="content-grid-effect slow-zoom vertical">
+          <div class="img-box"><%= image_tag "home/anh1.jpg",
+            class: "img-responsive zoom-img" %>
+          </div>
+          <div class="info-box">
+            <div class="info-content electro-text simpleCart_shelfItem">
+              <h4>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+              </h4>
+              <span class="separator"></span>
+              <span class="item_price">
+                <%= link_to "#", title: t("xem") do %>
+                  <i class="fa fa-map-marker"> <%= t "name" %></i>
+                <% end %>
+              </span>
+              <span class="separator"></span>
+              <%= link_to "#", title: t("thich") do %>
+                <h3><i class="fa fa-thumbs-up"></i></h3>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="item-info-product">
+          <span class="item_price destination-like">
+            <%= link_to "#", title: t("xem") do %>
+            <i class="fa fa-map-marker destination-name-color" >
+              <%= t "name" %>
+            </i>
+          <% end %>
+          </span>
+          <%= link_to "#", title: t("luotxem") do %>
+            <i class="fa fa-eye destination-luotxem-color" ></i>
+          <% end %>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="col-md-12 electro-right text-center">
+      <div class="electro-img-rt mask khampha-submit">
+        <div class="info-content">
+          <h3><%= link_to "#", class: "item_add hvr-outline-out button2" do %>
+            <i class="fa fa-map-marker">
+              <%= t "view.static_pages.khampha999" %>
+            </i>
+          <% end %></h3>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="ele-bottom-grid">
+      <h3><span><%= t "view.static_pages.diemden" %></span>
+        <%= t "view.static_pages.khongtheboqua" %>
+      </h3>
+      <p><%= t "view.static_pages.info_location" %></p>
+      <div class="col-md-3 product-men">
+        <div class="men-pro-item simpleCart_shelfItem">
+          <div class="men-thumb-item">
+            <%= image_tag "home/anh1.jpg", class: "pro-image-front" %>
+            <%= image_tag "home/anh1.jpg", class: "pro-image-back" %>
+            <div class="men-cart-pro">
+              <div class="inner-men-cart-pro">
+                <a href="single.html" class="link-product-add-cart">
+                  <%= t "xemngay" %>
+                </a>
+              </div>
+            </div>
+            <span class="product-new-top"><%= t "moi" %></span>
+          </div>
+          <div class="item-info-product ">
+            <h5>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </h5>
+            <h4><a href="single.html"><%= link_to "#", title: t("xem") do %>
+            <i class="fa fa-map-marker"><%= t "name" %></i>
+            <% end %></a></h4>
+            <div class="info-product-price">
+              <span class="item_price location-like">
+                <%= link_to "#", title: t("thich") do %>
+                <i class="fa fa-thumbs-up location-color-luotxem"></i>
+              <% end %>
+              </span>
+              <%= link_to "#", title: t("xem") do %>
+                <i class="fa fa-eye location-color-luotxem" ></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 electro-right text-center">
+        <div class="electro-img-rt mask location-submit">
+          <div class="info-content">
+            <h3>
+              <%= link_to "#", class: "item_add hvr-outline-out button2" do %>
+                <i class="fa fa-map-marker">
+                  <%= t "view.static_pages.khampha63" %>
+                </i>
+              <% end %>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

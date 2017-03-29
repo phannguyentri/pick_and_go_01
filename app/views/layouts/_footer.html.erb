@@ -1,0 +1,57 @@
+<div class="footer">
+  <div class="container">
+    <div class="col-md-3 footer-left">
+      <h2><%= link_to(image_tag "home/logo5.png") %></h2>
+      <p><%= t "view.layouts.info_footer" %></p>
+    </div>
+    <div class="col-md-9 footer-right">
+      <div class="col-sm-6 newsleft">
+        <h3></h3>
+      </div>
+      <div class="col-sm-6 newsright">
+        <form>
+          <input type="text" value="Email">
+          <input type="submit" value="<%= t 'view.layouts.gui' %>">
+        </form>
+      </div>
+      <div class="clearfix"></div>
+      <div class="sign-grds">
+        <div class="col-md-4 sign-gd">
+          <h4><%= t "thongtin" %></h4>
+          <ul>
+            <li><a href="index.html"><%= t "trangchu" %></a></li>
+            <li><a href="mens.html"><%= t "khamphavietnam" %></a></li>
+            <li><a href="womens.html"><%= t "diadiemphuot" %></a></li>
+            <li>
+              <a href="electronics.html"><%= t "view.layouts.meophuot" %>
+              </a>
+            </li>
+            <li><a href="codes.html"><%= t "view.layouts.kinhnghiem" %></a></li>
+            <li><a href="contact.html"><%= t "view.layouts.lienhe" %></a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 sign-gd-two">
+          <h4><%= t "view.layouts.thongtin_pick_and_go" %></h4>
+          <ul>
+            <li>
+              <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+              <%= t "view.layouts.diachi" %>: <%= t "view.layouts.danang" %>,
+              <span><%= t "view.layouts.vietnam" %></span>
+            </li>
+            <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+              <%= t "view.layouts.email" %> : <a href="pickandgo@gmail.com">
+              <%= t "view.layouts.pickandgo" %></a>
+            </li>
+            <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
+              <%= t "view.layouts.sdt" %>
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <p class="copy-right"><%= t "view.layouts.copy" %>
+    <a href="http://w3layouts.com/"><%= t "view.layouts.framgia" %></a></p>
+  </div>
+</div>
