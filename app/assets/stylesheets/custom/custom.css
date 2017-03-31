@@ -64,3 +64,13 @@
   width: 100px;
   height: 100px;
 }
+.textarea-destination{
+  width: 500px;
+  height: 100px;
+}
+.modal-add-destination{
+  width: 1000px;
+}
+.submit-add-destination{
+  text-align: center;
+}

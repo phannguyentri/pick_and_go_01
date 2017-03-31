@@ -30,4 +30,27 @@ $(document).ready(function(){
       })
     }
   });
+
+  $('.del-destination').click(function(e){
+    if (confirm('<%= I18n.t("view.admin.users.bandongy") %>')) {
+      e.preventDefault();
+      destination_id = $(this).attr('data-destinationid');
+      $.ajax({
+        url: '/admin/destinations/' + destination_id,
+        type: 'delete',
+        dataType: 'json'
+      })
+      .done(function(response) {
+        if (response.status_ok) {
+          $('#del-destination-' + destination_id).remove();
+          alert('<%= I18n.t("view.admin.users.xoathanhcong") %>');
+        }else{
+          alert('<%= I18n.t("view.admin.users.xoathatbai") %>');
+        }
+      })
+      .fail(function() {
+        alert('<%= I18n.t("error") %>');
+      })
+    }
+  });
 });

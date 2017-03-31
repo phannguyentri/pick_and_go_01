@@ -16,3 +16,4 @@
 //= require bootstrap
 //= require_tree ./admin
 //= require_tree ./custom
+//= require ckeditor/init

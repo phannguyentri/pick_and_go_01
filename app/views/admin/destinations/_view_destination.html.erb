@@ -1,0 +1,59 @@
+<div class="modal fade" id="view-destination-<%= destination.id %>"
+  tabindex="-1" role="dialog" aria-labelledby="Viewdestination"
+  aria-hidden="true">
+  <div class="modal-dialog modal-add-destination">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-hidden="true">&times;
+        </button>
+        <div class="modal-header text-center">
+          <h2 class="modal-title"><i class="fa fa-th-list"></i>
+            <%= t "view.admin.destinations.chitietbaiviet" %>
+          </h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <table class="table table-user-information">
+          <tbody>
+             <tr>
+              <td><%= t "view.admin.destinations.id" %></td>
+              <td><%= destination.id %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.destinations.ten" %></td>
+              <td><%= destination.name %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.destinations.thoigiandang" %></td>
+              <td><%= l destination.created_at, format: :short %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.destinations.luotxem" %></td>
+              <td><%= destination.count_view %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.destinations.hinhanh" %></td>
+              <td>
+                <%= image_tag destination.image.url, class: "image_user" %>
+              </td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.destinations.gioithieu" %></td>
+              <td><%= destination.description %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.destinations.noidung" %></td>
+              <td><%= raw destination.content %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t "thoat" %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
