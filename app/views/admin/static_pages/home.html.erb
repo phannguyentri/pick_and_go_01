@@ -1,4 +1,4 @@
-<% provide :title, t("admin") %>
+<% provide :title, t("view.admin.users.quantrivien") %>
 <div class="content-header content-header-media">
   <div class="header-section">
     <div class="row">
@@ -27,8 +27,8 @@
         <a href="javascript:void(0)"></a>
       </li>
       <li class="active">
-        <%= link_to "#" do %>
-          <i class="hi hi-tasks"></i> <%= t "name" %>
+        <%= link_to admin_destinations_path do %>
+          <i class="gi gi-google_maps"></i> <%= t "khamphavietnam" %>
         <% end %>
       </li>
       <li>
@@ -38,22 +38,8 @@
         <a href="javascript:void(0)"></a>
       </li>
       <li class="active">
-        <%= link_to "#" do %>
-          <i class="gi gi-charts"></i><%= t "name" %>
-        <% end %>
-      </li>
-      <li>
-        <a href="javascript:void(0)"></a>
-      </li>
-      <li>
-        <a href="javascript:void(0)"></a>
-      </li>
-      <li>
-        <a href="javascript:void(0)"></a>
-      </li>
-      <li class="active">
-        <%= link_to "#" do %>
-          <i class="gi gi-group"></i> <%= t "name" %>
+        <%= link_to admin_locations_path do %>
+          <i class="gi gi-google_maps"></i> <%= t "diadiemphuot" %>
         <% end %>
       </li>
       <li>
@@ -66,8 +52,23 @@
         <a href="javascript:void(0)"></a>
       </li>
       <li class="active">
-        <%= link_to "#" do %>
-          <i class="gi gi-fast_food"></i><%= t "name" %>
+        <%= link_to admin_users_path do %>
+          <i class="gi gi-group"></i>
+          <%= t "view.admin.layouts.quanlythanhvien" %>
+        <% end %>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li>
+        <a href="javascript:void(0)"></a>
+      </li>
+      <li class="active">
+        <%= link_to admin_events_path do %>
+          <i class="gi gi-calendar"></i></i> <%= t "sukien" %>
         <% end %>
       </li>
       <li>
@@ -78,7 +79,7 @@
       </li>
       <li class="active">
         <%= link_to "#" do %>
-          <i class="gi gi-shopping_cart"></i> <%= t "name" %>
+          <i class="gi gi-list"></i> <%= t "name" %>
         <% end %>
       </li>
       <li>
@@ -89,7 +90,7 @@
       </li>
       <li class="active">
         <%= link_to "#" do %>
-          <i class="gi gi-lightbulb"></i> <%= t "name" %>
+          <i class="gi gi-pencil"></i> <%= t "name" %>
         <% end %>
       </li>
     </ul>

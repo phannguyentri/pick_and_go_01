@@ -1,0 +1,82 @@
+<div class="modal fade" id="add-userr" tabindex="-1" role="dialog"
+  aria-labelledby="AddUser" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-hidden="true">&times;
+        </button>
+        <div class="modal-header text-center">
+          <h2 class="modal-title"><i class="hi hi-user"></i>
+            <%= t "view.admin.users.themthanhvien" %></h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <%= form_for [:admin, @user] do |f| %>
+          <table class="table table-user-information">
+            <tbody>
+              <tr>
+                <td><%= f.label t "view.admin.users.hoten" %></td>
+                <td><%= f.text_field :name, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <td><%= f.label t "view.admin.users.email" %></td>
+                <td><%= f.email_field :email, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <td><%= f.label t "view.admin.users.sdt" %></td>
+                <td><%= f.text_field :phone, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <tr>
+                  <td><%= f.label t "view.admin.users.diachi" %></td>
+                  <td><%= f.text_field :address, class: "form-control" %></td>
+                </tr>
+                <tr>
+                  <td><%= f.label t "view.admin.users.matkhau" %></td>
+                  <td>
+                    <%= f.password_field :password, class: "form-control" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= f.label :password_confirmation,
+                      t("view.admin.users.xacnhanmatkhau") %>
+                  </td>
+                  <td>
+                    <%= f.password_field :password_confirmation,
+                      class: "form-control" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td><%= f.label t "view.admin.users.hinhanh" %></td>
+                  <td>
+                    <span class="picture">
+                      <%= f.file_field :image, accept: Settings.accept_image %>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><h4>
+                    <%= f.label t "view.admin.users.quantrivien" %>
+                  </h4></td>
+                  <td>
+                    <%= f.check_box :is_admin, class: "form-control" %>
+                  </td>
+                </tr>
+              </tr>
+            </tbody>
+          </table>
+          <div id="submit-add-user">
+            <%= f.submit t("view.admin.users.them"), class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t "thoat" %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+$(document).ready(function(){
+  $(window).load(function() {
+    $('#visual').pignoseLayerSlider({
+      play: '.btn-play',
+      pause: '.btn-pause',
+      next: '.btn-next',
+      prev: '.btn-prev'
+    });
+  });
+
+  $('.del-user').click(function(e){
+    if (confirm('<%= I18n.t("view.admin.users.bandongy") %>')) {
+      e.preventDefault();
+      user_id = $(this).attr('data-userid');
+      $.ajax({
+        url: '/admin/users/' + user_id,
+        type: 'delete',
+        dataType: 'json'
+      })
+      .done(function(response) {
+        if (response.status_ok) {
+          $('#del-user-' + user_id).remove();
+          alert('<%= I18n.t("view.admin.users.xoathanhcong") %>');
+        }else{
+          alert('<%= I18n.t("view.admin.users.xoathatbai") %>');
+        }
+      })
+      .fail(function() {
+        alert('<%= I18n.t("error") %>');
+      })
+    }
+  });
+});
