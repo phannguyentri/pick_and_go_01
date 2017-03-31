@@ -8,7 +8,10 @@
   </head>
   <body>
     <%= render "layouts/header" %>
-    <%= render "layouts/slide" %>
+    <br>
+    <% if display_slide %>
+      <%= render "layouts/slide" %>
+    <% end %>
     <%= yield %>
     <%= render "layouts/footer" %>
     <%= render "layouts/sign_login" %>

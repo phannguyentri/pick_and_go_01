@@ -104,30 +104,48 @@
                   </div>
                 </ul>
               </li>
-              <li class="dropdown menu__item">
-                <a href="#" class="dropdown-toggle menu__link"
-                  data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false"><%= t "name" %>
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu multi-column columns-3">
-                  <div class="row">
-                    <div class="col-sm-4 multi-gd-img1 multi-gd-text ">
-                      <%= link_to image_tag("avatar.png") %>
+              <% if user_signed_in? %>
+                <li class="dropdown menu__item">
+                  <a href="#" class="dropdown-toggle menu__link"
+                    data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false"><%= current_user.name %>
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu multi-column columns-3">
+                    <div class="row">
+                      <div class="col-sm-4 multi-gd-img1 multi-gd-text ">
+                        <%= link_to image_tag(current_user.image) %>
+                      </div>
+                      <div class="col-sm-3 multi-gd-img">
+                        <ul class="multi-column-dropdown">
+                          <li>
+                            <a href="mens.html">
+                              <%= t "view.layouts.hoso" %>
+                            </a>
+                          </li>
+                          <li>
+                            <%= link_to t("view.devise.edit"),
+                              edit_user_registration_path %>
+                          </li>
+                          <li>
+                            <%= link_to(t("view.devise.logout"),
+                              destroy_user_session_path, method: :delete) %>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="clearfix"></div>
                     </div>
-                    <div class="col-sm-3 multi-gd-img">
-                      <ul class="multi-column-dropdown">
-                        <li>
-                          <a href="mens.html">
-                            <%= t "view.layouts.hồ sơ" %>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                </ul>
-              </li>
+                  </ul>
+                </li>
+
+              <% else %>
+                <li class=" menu__item"><%= link_to t("view.devise.login"),
+                 new_user_session_path, class: "menu__link" %>
+                </li>
+                <li class=" menu__item"><%= link_to t("view.devise.signup"),
+                 new_user_registration_path, class: "menu__link" %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>

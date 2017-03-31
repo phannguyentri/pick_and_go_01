@@ -5,7 +5,9 @@ en:
   diadiemphuot: "Địa điểm phượt"
   sukien: "Sự kiện"
   bog: "Blog"
-  name: "Name"
+  name: "Họ tên"
+  sdt: "Số điện thoại"
+  diachi: "Địa chỉ"
   pick_and_go: "Pick & Go"
   xem: "Xem"
   thich: "Thích"
@@ -17,7 +19,19 @@ en:
   time:
     formats:
       short: "%m/%d/%Y %H:%M"
+  save_change: "Lưu thay đổi"
+  avatar: "Ảnh đại diện"
+  update_your_account: "Chỉnh sửa tài khoản"
   view:
+    devise:
+      login: "Đăng nhập"
+      signup: "Đăng ký"
+      logout: "Đăng xuất"
+      edit: "Chỉnh sửa thông tin"
+      rematkhau: "Xác nhận mật khẩu"
+      leave_blank: "(leave blank if you don't want to change it)"
+      minimum: "characters minimum"
+      current_pass: "(we need your current password to confirm your changes)"
     pagination:
       first: "&laquo; First"
       last: "Last &raquo;"
@@ -47,6 +61,7 @@ en:
       dangky: "Đăng ký"
       matkhau: "Mật khẩu"
       confirmmatkhau: "Xác nhận mật khẩu"
+      current_pass: "Mật Khẩu hiện tại"
     static_pages:
       dangdienra: "Đang diễn ra"
       haythamgia: "Hãy tham gia cùng chúng tôi nào"
