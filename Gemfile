@@ -26,6 +26,7 @@ gem "chatwork"
 gem "font-awesome-sass"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "ckeditor"
 group :development, :test do
   gem "pry"
   gem "byebug", platform: :mri

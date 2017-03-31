@@ -1,0 +1,31 @@
+<tr id="del-destination-<%= destination.id %>">
+  <td class="text-center"><strong><%= destination.id %></strong></td>
+  <td class="text-center"><%= destination.name %></td>
+  <td class="text-center">
+    <div>
+      <%= image_tag destination.image.url, class: "image_user"  %>
+    </div>
+  </td>
+  <td class="text-center"><%= l destination.created_at, format: :short %></td>
+  <td class="text-center">
+    <div class="btn-group btn-group-xs">
+      <button class="btn btn-default" data-toggle="modal"
+        title= <%= t "view.admin.destinations.xem" %>
+          data-target="#view-destination-<%= destination.id %>">
+        <i class="fa fa-eye"></i>
+      </button>
+      <%= link_to edit_admin_destination_path(destination.id),
+        class: "btn btn-default",
+        title: t("view.admin.destinations.chinhsua") do %>
+         <i class="fa fa-pencil"></i>
+      <% end %>
+      <a data-destinationid="<%= destination.id %>"
+        title= <%= t "view.admin.destinations.xoa" %>
+        class="btn btn-default del-destination" href="#" >
+        <i class="fa fa-times"></i>
+      </a>
+    </div>
+    <%= render partial: "view_destination",
+      locals: {destination: destination} %>
+  </td>
+</tr>
