@@ -22,6 +22,7 @@ en:
   save_change: "Lưu thay đổi"
   avatar: "Ảnh đại diện"
   update_your_account: "Chỉnh sửa tài khoản"
+  location_found: "Vị trí hiện tại"
   view:
     devise:
       login: "Đăng nhập"
@@ -136,6 +137,9 @@ en:
         thoigiandang: "Thời gian đăng"
         chitietbaiviet: "Chi tiết bài viết"
         luotxem: "Lượt xem"
+        trungtinh: "Trùng tỉnh thành."
+        bando: "Bản đồ"
+        chontinhthanh: "Chọn tỉnh thành"
       locations:
         themthanhcong: "Thêm thành công"
         themthatbai: "Thêm thất bại"

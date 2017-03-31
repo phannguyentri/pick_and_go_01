@@ -12,6 +12,7 @@ class Destination < ApplicationRecord
   validates :name, presence: true, length: {maximum: Settings.maximum_name}
   validates :description, presence: true, length: {minimum: Settings.minimum}
   validates :content, presence: true, length: {minimum: Settings.minimum}
+  validates :place_id, uniqueness: true
   validate :image_size
 
   scope :newest, ->{order created_at: :desc}

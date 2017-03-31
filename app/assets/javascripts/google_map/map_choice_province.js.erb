@@ -1,0 +1,54 @@
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8
+  });
+
+  var infoWindow = new google.maps.InfoWindow({map: map});
+
+  // Yêu cầu truy cập vị trí
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('<%= I18n.t("location_found") %>');
+      map.setCenter(pos);
+      // send data and get json result
+      get_results_province(pos.lat, pos.lng);
+
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  }else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+  // end
+  google.maps.event.addListener(map, "click", function (e) {
+    //lat and lng is available in e object
+    var latLng = e.latLng;
+    get_results_province(latLng.lat(), latLng.lng());
+  });
+}
+
+function get_results_province(lat, lng){
+  $.ajax({
+    url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng='
+      + lat + ',' + lng + '&key=AIzaSyDiyjZrWfeOm7ucvA1pNjGIkSU693Hc_Ko',
+    type: 'get',
+  })
+  .done(function(response) {
+    $.each(response['results'], function(index, results) {
+      if (results['types'][0] === 'administrative_area_level_1') {
+        $('#destination_name').val(results['address_components'][0]['long_name']);
+        $('#destination_place_id').val(results['place_id']);
+      }
+    });
+  })
+  .fail(function() {
+    alert('<%= I18n.t("error") %>');
+  });
+}

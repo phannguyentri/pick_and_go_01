@@ -49,7 +49,7 @@ class Admin::DestinationsController < AdminController
 
   def destination_params
     params.require(:destination).permit :name, :image, :content, :description,
-      :status
+      :status, :place_id
   end
 
   def load_destination

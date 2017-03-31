@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170331040256) do
+ActiveRecord::Schema.define(version: 20170404064400) do
 
   create_table "arriveds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "location_id"
@@ -48,13 +48,13 @@ ActiveRecord::Schema.define(version: 20170331040256) do
 
   create_table "culturals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
-    t.string   "content"
+    t.text     "content",        limit: 65535
     t.string   "image"
-    t.integer  "status",         default: 0
+    t.integer  "status",                       default: 0
     t.integer  "user_id"
     t.integer  "destination_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.index ["destination_id"], name: "index_culturals_on_destination_id", using: :btree
     t.index ["user_id"], name: "index_culturals_on_user_id", using: :btree
   end
@@ -62,13 +62,14 @@ ActiveRecord::Schema.define(version: 20170331040256) do
   create_table "destinations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "image"
-    t.string   "content"
-    t.string   "description"
-    t.integer  "status",       default: 0
-    t.integer  "average_rate", default: 0
-    t.integer  "count_view",   default: 0
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "content",      limit: 65535
+    t.text     "description",  limit: 65535
+    t.integer  "status",                     default: 0
+    t.integer  "average_rate",               default: 0
+    t.integer  "count_view",                 default: 0
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "place_id"
   end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -104,19 +105,19 @@ ActiveRecord::Schema.define(version: 20170331040256) do
 
   create_table "locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.string   "content"
+    t.text     "content",        limit: 65535
     t.string   "image"
-    t.integer  "average_rate",   default: 0
+    t.integer  "average_rate",                 default: 0
     t.string   "latitude"
     t.string   "longtitude"
     t.string   "description"
-    t.integer  "status",         default: 0
-    t.integer  "count_arrived",  default: 0
-    t.integer  "count_view",     default: 0
+    t.integer  "status",                       default: 0
+    t.integer  "count_arrived",                default: 0
+    t.integer  "count_view",                   default: 0
     t.integer  "user_id"
     t.integer  "destination_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.index ["destination_id"], name: "index_locations_on_destination_id", using: :btree
     t.index ["user_id"], name: "index_locations_on_user_id", using: :btree
   end
@@ -124,13 +125,13 @@ ActiveRecord::Schema.define(version: 20170331040256) do
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "image"
-    t.string   "content"
-    t.integer  "count_view",  default: 0
-    t.integer  "status",      default: 0
+    t.text     "content",     limit: 65535
+    t.integer  "count_view",                default: 0
+    t.integer  "status",                    default: 0
     t.integer  "user_id"
     t.integer  "category_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["category_id"], name: "index_posts_on_category_id", using: :btree
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end

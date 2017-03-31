@@ -4,6 +4,7 @@
 Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.precompile += %w( admin.css )
 Rails.application.config.assets.precompile += %w( admin.js )
+Rails.application.config.assets.precompile += %w( google_map/map_choice_province.js )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
