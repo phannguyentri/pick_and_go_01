@@ -1,0 +1,69 @@
+<div class="modal fade" id="view-event-<%= event.id %>"
+  tabindex="-1" role="dialog" aria-labelledby="Viewevent"
+  aria-hidden="true">
+  <div class="modal-dialog modal-add-destination">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-hidden="true">&times;
+        </button>
+        <div class="modal-header text-center">
+          <h2 class="modal-title"><i class="fa fa-th-list"></i>
+            <%= t "view.admin.events.chitietbaiviet" %>
+          </h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <table class="table table-user-information">
+          <tbody>
+            <tr>
+              <td><%= t "view.admin.events.id" %></td>
+              <td><%= event.id %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.events.ten" %></td>
+              <td><%= event.title %></td>
+            </tr>
+            <tr>
+            <td><%= t "view.admin.events.trangthai" %></td>
+              <td>
+                <%= raw check_status_event event.time_start, event.time_end %>
+              </td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.events.tinhthanhpho" %></td>
+              <td><%= event.destination_name %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.events.thoigianbatdau" %></td>
+              <td><%= event.time_start %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.events.thoigianketthuc" %></td>
+              <td><%= event.time_end %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.events.thoigiandang" %></td>
+              <td><%= l event.created_at, format: :short %></td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.events.hinhanh" %></td>
+              <td>
+                <%= image_tag event.image.url, class: "image_user" %>
+              </td>
+            </tr>
+            <tr>
+              <td><%= t "view.admin.events.noidung" %></td>
+              <td><%= raw event.content %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t "thoat" %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

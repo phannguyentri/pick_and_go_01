@@ -1,0 +1,46 @@
+<div class="modal fade" id="send-mail-join-event" tabindex="-1" role="dialog"
+  aria-labelledby="AddUser" aria-hidden="true">
+  <div class="modal-dialog modal-add-destination">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-hidden="true">&times;
+        </button>
+        <div class="modal-header text-center">
+          <h2 class="modal-title"><i class="hi hi-user"></i>
+            <%= t "view.admin.join_events.thongbao" %>
+          </h2>
+        </div>
+      </div>
+      <div class="modal-body">
+        <%= form_tag admin_notification_events_path(id: @event.id),
+          html: {method: :post},
+          class: "navbar-form", role: "search" do %>
+          <div class="price-top">
+            <h4><b><i><%= t "view.admin.join_events.tieude" %></i></b></h4>
+          </div>
+          <div>
+            <%= text_field_tag :title, params[:title], class: "form-control",
+              required: :true %>
+          </div>
+          <div class="price-top">
+            <h4><b><i><%= t "view.admin.join_events.noidung" %></i></b></h4>
+          </div>
+          <div class="input-group add-on">
+            <%= cktext_area_tag :content, params[:content],
+              class: "form-control" %>
+          </div>
+          <div class="input-group-btn submit-add-destination">
+            <%= submit_tag t("view.admin.join_events.guithu"),
+              class: "btn btn-default" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t "thoat" %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

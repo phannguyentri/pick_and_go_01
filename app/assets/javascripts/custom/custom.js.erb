@@ -53,4 +53,55 @@ $(document).ready(function(){
       })
     }
   });
+
+  $('.del-event').click(function(e){
+    if (confirm('<%= I18n.t("view.admin.users.bandongy") %>')) {
+      e.preventDefault();
+      event_id = $(this).attr('data-eventid');
+      $.ajax({
+        url: '/admin/events/' + event_id,
+        type: 'delete',
+        dataType: 'json'
+      })
+      .done(function(response) {
+        if (response.status_ok) {
+          $('#del-event-' + event_id).remove();
+          alert('<%= I18n.t("view.admin.users.xoathanhcong") %>');
+        }else{
+          alert('<%= I18n.t("view.admin.users.xoathatbai") %>');
+        }
+      })
+      .fail(function() {
+        alert('<%= I18n.t("error") %>');
+      })
+    }
+  });
+
+  $('.del-join-event').click(function(e){
+    if (confirm('<%= I18n.t("view.admin.users.bandongy") %>')) {
+      e.preventDefault();
+      join_event_id = $(this).attr('data-join-eventid');
+      $.ajax({
+        url: '/admin/join_events/' + join_event_id,
+        type: 'delete',
+        dataType: 'json'
+      })
+      .done(function(response) {
+        if (response.status_ok) {
+          $('#del-join-event-' + join_event_id).remove();
+          alert('<%= I18n.t("view.admin.users.xoathanhcong") %>');
+        }else{
+          alert('<%= I18n.t("view.admin.users.xoathatbai") %>');
+        }
+      })
+      .fail(function() {
+        alert('<%= I18n.t("error") %>');
+      })
+    }
+  });
+
+  $('.datepicker').datepicker({
+    format: 'dd/mm/yyyy',
+    startDate: '-3d'
+  });
 });

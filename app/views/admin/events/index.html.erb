@@ -1,0 +1,54 @@
+<% provide :title, t("view.admin.events.sukien") %>
+<div class="content-header">
+  <div class="header-section">
+    <h1>
+      <i class="gi gi-table"></i><%= t "view.admin.events.danhsach" %>
+    </h1>
+  </div>
+</div>
+<ul class="breadcrumb breadcrumb-top">
+  <li><%= link_to t("trangchu"), admin_root_path %></li>
+  <li><%= t "view.admin.events.danhsach" %></li>
+</ul>
+<div>
+  <%= link_to new_admin_event_path, class: "btn btn-primary btn-lg" do %>
+    <i class="fa fa-th-list"> <%= t "view.admin.events.themsukien" %></i>
+  <% end %>
+</div>
+<div class="block">
+  <div class="block-title">
+    <h2><strong><%= t "view.admin.events.danhsach" %></strong></h2>
+  </div>
+  <div class="table-responsive">
+    <table id="general-table" class="table table-striped table-vcenter">
+      <thead>
+        <tr>
+          <th class="text-center"><%= t "view.admin.events.id" %></th>
+          <th class="text-center"><%= t "view.admin.events.tieude" %></th>
+          <th class="text-center">
+            <%= t "view.admin.events.hinhanh" %>
+          </th>
+          <th class="text-center">
+            <%= t "view.admin.events.tinhthanhpho" %>
+          </th>
+          <th class="text-center">
+            <%= t "view.admin.events.thoigiandangky" %>
+          </th>
+          <th class="text-center">
+            <%= t "view.admin.events.trangthai" %>
+          </th>
+          <th class="text-center">
+            <%= t "view.admin.events.hanhdong" %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "list_events",
+          collection: @events, as: :event %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="submit-add-destination">
+  <%= paginate @events %>
+</div>

@@ -28,6 +28,7 @@ gem "kaminari"
 gem "bootstrap-kaminari-views"
 gem "ckeditor"
 gem "devise"
+gem "bootstrap-datepicker-rails"
 group :development, :test do
   gem "pry"
   gem "byebug", platform: :mri

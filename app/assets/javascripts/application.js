@@ -15,3 +15,4 @@
 //= require_tree ./home
 //= require_tree ./custom
 //= require ckeditor/init
+//= require bootstrap-datepicker

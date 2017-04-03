@@ -1,0 +1,15 @@
+<tr class="active" id="del-join-event-<%= join_event.id %>">
+  <td><%= join_event.user_name %></td>
+  <td><%= join_event.user_email %></td>
+  <td><%= join_event.user_phone %></td>
+  <td><%= join_event.user_address %></td>
+  <td class="text-center">
+    <div class="btn-group btn-group-xs">
+      <a data-join-eventid="<%= join_event.id %>"
+        title= <%= t "view.admin.users.xoa" %>
+        class="btn btn-default del-join-event" href="#" >
+        <i class="fa fa-times"></i>
+      </a>
+    </div>
+  </td>
+</tr>
