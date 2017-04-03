@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328032039) do
+ActiveRecord::Schema.define(version: 20170331040256) do
 
-  create_table "arriveds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "arriveds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "location_id"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_arriveds_on_user_id", using: :btree
   end
 
-  create_table "bookmarks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "bookmarks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "bookmarkable_id"
     t.string   "bookmarkable_type"
     t.integer  "user_id"
@@ -30,13 +30,13 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_bookmarks_on_user_id", using: :btree
   end
 
-  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "content"
     t.integer  "commentable_id"
     t.string   "commentable_type"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
-  create_table "culturals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "culturals", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "content"
     t.string   "image"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_culturals_on_user_id", using: :btree
   end
 
-  create_table "destinations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "destinations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "image"
     t.string   "content"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.datetime "updated_at",               null: false
   end
 
-  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.date     "time_start"
     t.date     "time_end"
@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["destination_id"], name: "index_events_on_destination_id", using: :btree
   end
 
-  create_table "join_events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "join_events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "event_id"
     t.datetime "created_at", null: false
@@ -93,7 +93,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_join_events_on_user_id", using: :btree
   end
 
-  create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "likeable_id"
     t.string   "likeable_type"
     t.integer  "user_id"
@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_likes_on_user_id", using: :btree
   end
 
-  create_table "locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "locations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "content"
     t.string   "image"
@@ -121,7 +121,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_locations_on_user_id", using: :btree
   end
 
-  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "image"
     t.string   "content"
@@ -135,7 +135,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
-  create_table "ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "ratings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "point"
     t.integer  "rateable_id"
     t.string   "rateable_type"
@@ -145,7 +145,7 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_ratings_on_user_id", using: :btree
   end
 
-  create_table "suggests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "suggests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
     t.string   "content"
     t.integer  "status",         default: 0
@@ -157,17 +157,27 @@ ActiveRecord::Schema.define(version: 20170328032039) do
     t.index ["user_id"], name: "index_suggests_on_user_id", using: :btree
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.string   "email"
     t.string   "address"
     t.string   "phone"
     t.string   "info"
     t.string   "image"
-    t.string   "password_digest"
-    t.boolean  "is_admin",        default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.boolean  "is_admin",               default: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,     null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   add_foreign_key "arriveds", "locations"

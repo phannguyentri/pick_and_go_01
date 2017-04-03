@@ -7,4 +7,13 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def display_slide
+    if params[:controller] == "devise/sessions" ||
+     params[:controller] == "users/registrations"
+      return false
+    else
+      return true
+    end
+  end
 end

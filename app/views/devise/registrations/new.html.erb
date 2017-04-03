@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0
+      col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= t "view.devise.signup" %></h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class=" col-md-9 col-lg-9 ">
+              <%= form_for(resource, as: resource_name,
+                url: registration_path(resource_name)) do |f| %>
+                <%= devise_error_messages! %>
+                <table class="table table-user-information">
+                  <tbody>
+                    <tr>
+                      <td><label><%= t "name" %></label></td>
+                      <td><%= f.text_field :name, class: "form-control" %></td>
+                    </tr>
+                    <tr>
+                      <td><%= f.label :email %></td>
+                      <td>
+                        <%= f.email_field :email, class: "form-control" %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label><%= t "sdt" %></label></td>
+                      <td><%= f.text_field :phone, class: "form-control" %></td>
+                    </tr>
+                    <tr>
+                      <td><label><%= t "diachi" %></label></td>
+                      <td>
+                        <%= f.text_field :address, class: "form-control" %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label><%= t "view.layouts.matkhau" %></label></td>
+                      <td><%= f.password_field :password,
+                        class: "form-control" %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label><%= t "view.layouts.confirmmatkhau" %></label>
+                      </td>
+                      <td><%= f.password_field :password_confirmation,
+                        class: "form-control" %>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><label><%= t "avatar" %></label></td>
+                      <td><%= f.file_field :image %></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <%= f.submit t("view.devise.signup"),
+                  class: "btn btn-primary signup" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

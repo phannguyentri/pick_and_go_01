@@ -27,6 +27,7 @@ gem "font-awesome-sass"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
 gem "ckeditor"
+gem "devise"
 group :development, :test do
   gem "pry"
   gem "byebug", platform: :mri
