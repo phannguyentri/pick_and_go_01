@@ -1,0 +1,39 @@
+<tr id="del-event-<%= event.id %>">
+  <td class="text-center"><strong><%= event.id %></strong></td>
+  <td class="text-center"><%= event.title %></td>
+  <td class="text-center">
+    <div>
+      <%= image_tag event.image.url, class: "image_user"  %>
+    </div>
+  </td>
+  <td class="text-center"><%= event.destination_name %></td>
+  <td class="text-center"><%= event.time_start %> - <%= event.time_end %></td>
+  <td class="text-center">
+    <%= raw check_status_event event.time_start, event.time_end %>
+  </td>
+  <td class="text-center">
+    <div class="btn-group btn-group-xs">
+      <%= link_to admin_join_events_path(id: event.id),
+        class: "btn btn-default",
+        title: t("view.admin.events.thanhvien") do %>
+        <i class="fa fa-user"></i>
+      <% end %>
+      <button class="btn btn-default" data-toggle="modal"
+        title= <%= t "view.admin.events.xem" %>
+        data-target="#view-event-<%= event.id %>">
+        <i class="fa fa-eye"></i>
+      </button>
+      <%= link_to edit_admin_event_path(event.id),
+        class: "btn btn-default",
+        title: t("view.admin.events.chinhsua") do %>
+        <i class="fa fa-pencil"></i>
+      <% end %>
+      <%= link_to "#", data: {eventid: event.id},
+        title: t("view.admin.events.xoa"),
+        class: "btn btn-default del-event" do %>
+        <i class="fa fa-times"></i>
+      <% end %>
+    </div>
+    <%= render partial: "view_event", locals: {event: event} %>
+  </td>
+</tr>

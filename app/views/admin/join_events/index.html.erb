@@ -1,0 +1,71 @@
+<% provide :title, t("view.admin.users.thanhvien") %>
+<div class="content-header">
+  <div class="header-section">
+    <h1>
+      <i class="gi gi-table"></i>
+      <%= t "view.admin.join_events.danhsachthanhvien" %>
+      <br>
+    </h1>
+  </div>
+</div>
+<ul class="breadcrumb breadcrumb-top">
+  <li><%= link_to t("trangchu"), admin_root_path %></li>
+  <li>
+    <%= t "view.admin.join_events.danhsachthanhvien" %>
+  </li>
+</ul>
+<div>
+  <h3>
+    <p>
+      <b><%= t "view.admin.join_events.sukien" %>: </b>
+      <%= @event.title %>
+    </p>
+    <p>
+      <b><%= t "view.admin.join_events.sothanhvienthamgia" %>:</b>
+      <%= @event.join_events.size %>
+    </p>
+    <p>
+    <b><%= t "view.admin.join_events.thoigiandangky" %>: </b>
+      <%= @event.time_start %> - <%= @event.time_end %>
+    </p>
+    <p>
+      <b><%= t "view.admin.join_events.trangthai" %>:</b>
+      <%= raw check_status_event @event.time_start, @event.time_end %>
+    </p>
+  </h3>
+  </br></br>
+</div>
+<div>
+  <button class="btn btn-primary btn-lg" data-toggle="modal"
+    data-target="#send-mail-join-event">
+    <i class="fa fa-join_event"> <%= t "view.admin.join_events.guithu" %></i>
+  </button>
+</div>
+<div class="block">
+  <div class="block-title">
+    <h2>
+      <strong><%= t "view.admin.join_events.danhsachthanhvien" %></strong>
+    </h2>
+  </div>
+  <div class="table-responsive">
+    <table id="general-table" class="table table-striped table-vcenter">
+      <thead>
+        <tr>
+          <th><%= t "view.admin.users.hoten" %></th>
+          <th><%= t "view.admin.users.email" %></th>
+          <th><%= t "view.admin.users.sdt" %></th>
+          <th><%= t "view.admin.users.diachi" %></th>
+          <th class="text-center"><%= t "view.admin.users.hanhdong" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "list_join_events",
+          collection: @join_events, as: :join_event %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="submit-add-destination">
+  <h4><%= paginate @join_events %></h4>
+</div>
+<%= render "form_send_mail" %>

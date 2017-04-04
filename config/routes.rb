@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :destinations
   resources :locations
   resources :events
+  resources :users
+  resources :posts
+  resources :culturals
 
   namespace :admin do
     root "static_pages#home"
@@ -13,5 +16,10 @@ Rails.application.routes.draw do
     resources :destinations
     resources :locations
     resources :events
+    resources :posts
+    resources :notification_events
+    resources :join_events
+    resources :culturals
+    resources :categories
   end
 end
